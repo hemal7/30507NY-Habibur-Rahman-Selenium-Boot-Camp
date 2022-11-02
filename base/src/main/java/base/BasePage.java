@@ -81,7 +81,7 @@ public class BasePage {
     }
 
     @Parameters({"driverConfigEnabled", "browser", "url"})
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void driverSetup(@Optional("true") String driverConfigEnabled, @Optional("chrome") String browser, @Optional("http://espn.com") String url) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driverInit(browser);
@@ -92,7 +92,7 @@ public class BasePage {
     }
 
     @Parameters({"driverConfigEnabled"})
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void cleanUp(@Optional("true") String driverConfigEnabled) {
         if (Boolean.parseBoolean(driverConfigEnabled)) {
             driver.close();
