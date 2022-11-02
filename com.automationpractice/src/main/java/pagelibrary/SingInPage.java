@@ -13,7 +13,7 @@ public class SingInPage extends BasePage {
     public WebElement passord;
 
     @FindBy(className = "page-heading")
-    public WebElement forCheckPage;
+    public WebElement forCheckPage;          // find locator for search Btn
 
     public SingInPage(){
         PageFactory.initElements(driver,this);
@@ -25,5 +25,6 @@ public class SingInPage extends BasePage {
     public void enterPassord(){
         sendKeysToElement(passord, "2022");
     }
+
 
 }
