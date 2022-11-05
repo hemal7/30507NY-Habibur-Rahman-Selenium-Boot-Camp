@@ -14,8 +14,10 @@ public class HomePage extends BasePage {
 
 
     public HomePage (){                                                        // constuctor
+
         PageFactory.initElements(driver,this);
     }
+
     public void clickSignInBtn ( ){
         clickOnElement(signInBtn);
     }
